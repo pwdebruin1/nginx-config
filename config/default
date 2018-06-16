@@ -1,0 +1,10 @@
+server {
+    listen   80;
+    server_name   private.debruinnetwork.com;   
+    if ($http_x_forwarded_proto = 'http') {
+         return 301 https://$server_name$request_uri;   
+    }
+}
+
+
+
